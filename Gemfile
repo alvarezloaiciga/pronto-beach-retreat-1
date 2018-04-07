@@ -19,6 +19,7 @@ gem "jquery-rails"
 gem 'bootstrap', '~> 4.0.0'
 gem 'devise'
 gem "paperclip", "~> 6.0.0"
+gem "active_model_serializers"
 
 group :production do
   gem "aws-sdk-s3"
