@@ -88,4 +88,12 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.action_mailer.default_url_options = { host: 'heroku' }
+
+  config.paperclip_defaults = {
+    storage: :s3,
+    preserve_files: true,
+    bucket: ENV['S3_BUCKET_NAME']
+  }
 end

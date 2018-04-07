@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
+    @product = Product.find_by(token: params[:token])
   end
 
   private
@@ -21,6 +21,6 @@ class ProductsController < ApplicationController
   def product_params
     params
     .require(:product)
-    .permit(:name, :price)
+    .permit(:name, :price, :image)
   end
 end

@@ -3,5 +3,6 @@
 <%= form_for @product do |f| %>
   <%= f.text_field :name, placeholder: "Name" %>
   <%= f.number_field :price, placeholder: "Price" %>
+  <%= f.file_field :image %>
   <%= f.submit %>
 <% end %>
