@@ -19,7 +19,10 @@ gem "jquery-rails"
 gem 'bootstrap', '~> 4.0.0'
 gem 'devise'
 gem "paperclip", "~> 6.0.0"
-gem 'aws-sdk', '~> 2.3'
+
+group :production do
+  gem "aws-sdk-s3"
+end
 
 group :development, :test do
   gem "rspec-rails"
